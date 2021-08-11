@@ -9,3 +9,4 @@ RUN apk add --no-cache \
   python python-dev
 
 RUN npm install --unsafe-perm -g dociql
+RUN npm start
