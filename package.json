@@ -1,0 +1,23 @@
+{
+  "name": "api-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node bin/dociql -l eevee.png config.yml",
+    "publish": "node bin/dociql -l eevee.png -t docs config.yml",
+    "test": "nyc --lines 85 --reporter=lcovonly --reporter=text-summary mocha && node bin/dociql -l eevee.png config.yml",
+    "develop": "dociql -d",
+    "start": "dociql -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demandcluster/api-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demandcluster/api-docs/issues"
+  },
+  "homepage": "https://github.com/demandcluster/api-docs#readme"
+}
