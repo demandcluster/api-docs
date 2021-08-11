@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:12-alpine
 MAINTAINER Ron W. van Etten <ron@demandcluster.com>
 
 USER 0
