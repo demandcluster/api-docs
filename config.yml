@@ -16,7 +16,7 @@ info:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
 domains:
-  - name: Product information for storefront
+  - name: Product info
     description: Queries to get product information from a catalog.
     usecases:
      - name: catalogItems
