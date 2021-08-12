@@ -19,15 +19,26 @@
         <nav id="nav" role="navigation">
           <h5>Topics</h5>
           <a href="#introduction">Introduction</a>
-          <h5>Paths</h5>
-          <!-- <section>
-                <a href="#path-get_catalog">get_catalog</a>
-                <ul> -->
-          <!-- <li> -->
-          <a href="#operation-get_catalog-post"> Get Catalog </a>
-          <!-- </li> -->
-          <!-- </ul>
-              </section> -->
+          <h5>Operations</h5>
+          <section>
+            <a href="#tag-Query-Catalog">Query Catalog</a>
+            <ul>
+              <li>
+                <a href="#operation-query_catalog-post"> Query Catalog </a>
+              </li>
+              <li>
+                <a href="#operation-query_product-post"> Query Product </a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <a href="#tag-Channel-Manager">Channel Manager</a>
+            <ul>
+              <li>
+                <a href="#operation-get_channels-post"> Get Channels </a>
+              </li>
+            </ul>
+          </section>
           <h5>Schema Definitions</h5>
           <a href="#definition-Account"> Account </a>
           <a href="#definition-AccountConnection"> AccountConnection </a>
@@ -561,9 +572,13 @@ https://api.demandcluster.com/graphql
               </div>
             </div>
           </div>
-          <h1>Paths</h1>
-          <span id="path-get_catalog"></span>
-          <div id="operation-get_catalog-post" class="operation panel" data-traverse-target="operation-get_catalog-post">
+          <h1 id="tag-Query-Catalog" class="swagger-summary-tag" data-traverse-target="tag-Query-Catalog">Query Catalog</h1>
+          <div class="tag-description doc-row">
+            <div class="doc-copy">
+              <p>Base query to get product catalog information.</p>
+            </div>
+          </div>
+          <div id="operation-query_catalog-post" class="operation panel" data-traverse-target="operation-query_catalog-post">
             <!-- <section class="operation-tags row"> -->
             <!-- <div class="doc-copy"> -->
             <div class="operation-tags">
@@ -573,12 +588,12 @@ https://api.demandcluster.com/graphql
             <!-- </div> -->
             <!-- </section> -->
             <h2 class="operation-title">
-              <span class="operation-summary">Get Catalog</span>
+              <span class="operation-summary">Query Catalog</span>
             </h2>
             <div class="doc-row">
               <div class="doc-copy">
                 <section class="swagger-operation-description">
-                  <p>Query list of products</p>
+                  <p>Fetch a list of products from a catalog.</p>
                 </section>
               </div>
             </div>
@@ -768,7 +783,6 @@ https://api.demandcluster.com/graphql
                     <head></head>
                     <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> catalogItems<span class="hljs-tag">(<span class="hljs-code">$shopIds</span>: [ID]!, <span class="hljs-code">$tagIds</span>: [ID], <span class="hljs-code">$booleanFilters</span>: <span class="hljs-type">[CatalogBooleanFilter]</span>, <span class="hljs-code">$searchQuery</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$after</span>:<span class="hljs-type"> ConnectionCursor,</span> <span class="hljs-code">$before</span>:<span class="hljs-type"> ConnectionCursor,</span> <span class="hljs-code">$first</span>:<span class="hljs-type"> ConnectionLimitInt,</span> <span class="hljs-code">$last</span>:<span class="hljs-type"> ConnectionLimitInt,</span> <span class="hljs-code">$offset</span>:<span class="hljs-type"> Int,</span> <span class="hljs-code">$sortOrder</span>:<span class="hljs-type"> SortOrder,</span> <span class="hljs-code">$sortByPriceCurrencyCode</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$sortBy</span>:<span class="hljs-type"> CatalogItemSortByField)</span>{
   catalogItems(shopIds: <span class="hljs-code">$shopIds</span>, tagIds: <span class="hljs-code">$tagIds</span>, booleanFilters: <span class="hljs-code">$booleanFilters</span>, searchQuery: <span class="hljs-code">$searchQuery</span>, after: <span class="hljs-code">$after</span>, before: <span class="hljs-code">$before</span>, first: <span class="hljs-code">$first</span>, last: <span class="hljs-code">$last</span>, offset: <span class="hljs-code">$offset</span>, sortOrder: <span class="hljs-code">$sortOrder</span>, sortByPriceCurrencyCode: <span class="hljs-code">$sortByPriceCurrencyCode</span>, sortBy: <span class="hljs-code">$sortBy</span>)</span><span class="hljs-tag">{
-    <span class="hljs-symbol">totalCount</span>
   }</span></span>
 }
 </code></pre> </body>
@@ -800,7 +814,7 @@ https://api.demandcluster.com/graphql
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://api.demandcluster.com/graphql?query=query%20catalogItems(%24shopIds%3A%20%5BID%5D!%2C%20%24tagIds%3A%20%5BID%5D%2C%20%24booleanFilters%3A%20%5BCatalogBooleanFilter%5D%2C%20%24searchQuery%3A%20String%2C%20%24after%3A%20ConnectionCursor%2C%20%24before%3A%20ConnectionCursor%2C%20%24first%3A%20ConnectionLimitInt%2C%20%24last%3A%20ConnectionLimitInt%2C%20%24offset%3A%20Int%2C%20%24sortOrder%3A%20SortOrder%2C%20%24sortByPriceCurrencyCode%3A%20String%2C%20%24sortBy%3A%20CatalogItemSortByField)%7B%0A%20%20catalogItems(shopIds%3A%20%24shopIds%2C%20tagIds%3A%20%24tagIds%2C%20booleanFilters%3A%20%24booleanFilters%2C%20searchQuery%3A%20%24searchQuery%2C%20after%3A%20%24after%2C%20before%3A%20%24before%2C%20first%3A%20%24first%2C%20last%3A%20%24last%2C%20offset%3A%20%24offset%2C%20sortOrder%3A%20%24sortOrder%2C%20sortByPriceCurrencyCode%3A%20%24sortByPriceCurrencyCode%2C%20sortBy%3A%20%24sortBy)%7B%0A%20%20%20%20totalCount%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                    <a href="https://api.demandcluster.com/graphql?query=query%20catalogItems(%24shopIds%3A%20%5BID%5D!%2C%20%24tagIds%3A%20%5BID%5D%2C%20%24booleanFilters%3A%20%5BCatalogBooleanFilter%5D%2C%20%24searchQuery%3A%20String%2C%20%24after%3A%20ConnectionCursor%2C%20%24before%3A%20ConnectionCursor%2C%20%24first%3A%20ConnectionLimitInt%2C%20%24last%3A%20ConnectionLimitInt%2C%20%24offset%3A%20Int%2C%20%24sortOrder%3A%20SortOrder%2C%20%24sortByPriceCurrencyCode%3A%20String%2C%20%24sortBy%3A%20CatalogItemSortByField)%7B%0A%20%20catalogItems(shopIds%3A%20%24shopIds%2C%20tagIds%3A%20%24tagIds%2C%20booleanFilters%3A%20%24booleanFilters%2C%20searchQuery%3A%20%24searchQuery%2C%20after%3A%20%24after%2C%20before%3A%20%24before%2C%20first%3A%20%24first%2C%20last%3A%20%24last%2C%20offset%3A%20%24offset%2C%20sortOrder%3A%20%24sortOrder%2C%20sortByPriceCurrencyCode%3A%20%24sortByPriceCurrencyCode%2C%20sortBy%3A%20%24sortBy)%7B%0A%20%20%7D%0A%7D" target="_blank">Try it now
                       <a/> </section>
               </div>
             </div>
@@ -841,12 +855,268 @@ https://api.demandcluster.com/graphql
                   <head></head>
                   <body><pre><code class="hljs language-json">{
   <span class="hljs-attr">&quot;data&quot;</span>: {
-    <span class="hljs-attr">&quot;catalogItems&quot;</span>: {
-      <span class="hljs-attr">&quot;nodes&quot;</span>: [
-        <span class="hljs-literal">null</span>
-      ],
-      <span class="hljs-attr">&quot;totalCount&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>
+    <span class="hljs-attr">&quot;catalogItems&quot;</span>: {}
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="operation-query_product-post" class="operation panel" data-traverse-target="operation-query_product-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-Query-Catalog">Query Catalog</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">Query Product</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>Fetch a single product from a catalog.</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body"> </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">shopId:
+                        <span class="prop-type">
+                          <div class="json-property-type">string</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>ID of the shop that owns the catalog product. Not required but highly recommended if you have multiple shops and <code>slugOrId</code> is a slug because slugs are unique only within a shop.</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">slugOrId:
+                        <span class="prop-type">
+                          <div class="json-property-type">string</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Provide either a product ID or slug</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h4>Example</h3>
+                    <h5>Request Content-Types:
+                      <span>application/json</span>
+                    </h5>
+                    <h5>Query</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> catalogItemProduct<span class="hljs-tag">(<span class="hljs-code">$shopId</span>: ID, <span class="hljs-code">$slugOrId</span>:<span class="hljs-type"> String)</span>{
+  catalogItemProduct(shopId: <span class="hljs-code">$shopId</span>, slugOrId: <span class="hljs-code">$slugOrId</span>)</span><span class="hljs-tag">{
+    <span class="hljs-symbol">_id</span>
+    <span class="hljs-symbol">createdAt</span>
+    <span class="hljs-symbol">updatedAt</span>
+  }</span></span>
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <h5>Variables</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;shopId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;slugOrId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <a href="https://api.demandcluster.com/graphql?query=query%20catalogItemProduct(%24shopId%3A%20ID%2C%20%24slugOrId%3A%20String)%7B%0A%20%20catalogItemProduct(shopId%3A%20%24shopId%2C%20slugOrId%3A%20%24slugOrId)%7B%0A%20%20%20%20_id%0A%20%20%20%20createdAt%0A%20%20%20%20updatedAt%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                      <a/> </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/CatalogItemProduct">CatalogItemProduct</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;catalogItemProduct&quot;</span>: {
+      <span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <h1 id="tag-Channel-Manager" class="swagger-summary-tag" data-traverse-target="tag-Channel-Manager">Channel Manager</h1>
+          <div class="tag-description doc-row">
+            <div class="doc-copy">
+              <p>Base query to get channel information.</p>
+            </div>
+          </div>
+          <div id="operation-get_channels-post" class="operation panel" data-traverse-target="operation-get_channels-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-Channel-Manager">Channel Manager</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">Get Channels</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body"> </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">input:
+                        <span class="prop-type">
+                          <div class="json-property-type">
+                            <div class="">
+                              <a class="json-schema-ref" href="#/definitions/IDchannelsearch">IDchannelsearch</a>
+                            </div>
+                          </div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Get channels input</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h4>Example</h3>
+                    <h5>Request Content-Types:
+                      <span>application/json</span>
+                    </h5>
+                    <h5>Query</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> GetChannels<span class="hljs-tag">(<span class="hljs-code">$input</span>: IDchannelsearch)</span><span class="hljs-tag">{
+  <span class="hljs-symbol">GetChannels<span class="hljs-tag">(input: <span class="hljs-code">$input</span>)</span><span class="hljs-tag">{
+  }</span></span>
+}</span></span>
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <h5>Variables</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;input&quot;</span>: {
+    <span class="hljs-attr">&quot;channelId&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;exportId&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;first&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;offset&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;search&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;shopId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  }
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <a href="https://api.demandcluster.com/graphql?query=query%20GetChannels(%24input%3A%20IDchannelsearch)%7B%0A%20%20GetChannels(input%3A%20%24input)%7B%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                      <a/> </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ResultChannelInfo">ResultChannelInfo</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;GetChannels&quot;</span>: {}
   }
 }
 </code></pre> </body>

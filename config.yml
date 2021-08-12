@@ -9,6 +9,7 @@ info:
     GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
   version: 1.0.0
   title: Mailchimp Open Commerce API
+  logo: logo.svg
 #  termsOfService: 'https://graphql-pokemon2.vercel.app/terms'
   contact:
     email: ron@demandcluster.com
@@ -19,18 +20,21 @@ domains:
   - name: Query Catalog
     description: Base query to get product catalog information.
     usecases:
-     - name: Get Catalog
-       description: Query list of products
+     - name: Query Catalog
+       description: Fetch a list of products from a catalog.
        query: query.catalogItems
-       expand: title,slug
+       expand: title,slug,Node
        select: shopIds
-  - name: Get Channels 
-    description: Base query to get channel information
+     - name: Query Product
+       description: Fetch a single product from a catalog.
+       query: query.catalogItemProduct
+  - name: Channel Manager
+    description: Base query to get channel information.
     usecases:
      - name: Get Channels
        query:  query.GetChannels
        select: shopId
-       expand: channel channel_market     
+       expand: channel,channel_market     
     # usecases:
     #  - name: Query Attack Rating
     #    description: Query Pokémon
