@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: demandcluster/api-docs:1.0.0
+      tag: demandcluster/api-docs:1.0.1
       pushRemote: true
       registry: harbor.demandcluster.com
 timeout: 60
