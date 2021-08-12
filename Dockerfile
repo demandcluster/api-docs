@@ -5,7 +5,8 @@ USER 0
 WORKDIR /usr/share/app
 COPY ./config.yml ./config.yml
 COPY ./package.json ./package.json
-COPY ./logo.svg ./logo.svg
+RUN mkdir images
+COPY ./logo.svg ./images/logo.svg
 
 RUN apk add --no-cache \
   nodejs nodejs-npm g++ \
