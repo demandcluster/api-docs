@@ -1,10 +1,10 @@
 introspection: https://api.demandcluster.com/graphql
 servers:
   - url: https://api.demandcluster.com/graphql
-    description: Demandcluster Dev Server  
+    description: DemandCluster Dev Server  
 info:
   description: |
-    Welcome to the [Demandcluster](https://demandcluster.com) API reference.
+    Welcome to the [DemandCluster](https://demandcluster.com) API reference.
 
     Our marketplace, channel manager and SEO features are built upon the [Mailchimp Open Commerce Framework](https://mailchimp.com/developer/open-commerce/).
     
@@ -12,7 +12,7 @@ info:
 
     GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
   version: 1.0.1
-  title: Demandcluster API
+  title: DemandCluster API
 #  termsOfService: 'https://graphql-pokemon2.vercel.app/terms'
   contact:
     email: ron@demandcluster.com
