@@ -22,8 +22,21 @@ domains:
      - name: Get Catalog
        description: Query list of products
        query: query.catalogItems
-       expand: weight,height       
-
+       expand: title,slug
+       select: shopIds
+  - name: Get Channels 
+    description: Base query to get channel information
+    usecases:
+     - name: Get Channels
+       query:  query.GetChannels
+       select: shopId
+       expand: channel channel_market     
+    # usecases:
+    #  - name: Query Attack Rating
+    #    description: Query Pokémon
+    #    query: query.pokemon       
+    #    select: id name
+    #    expand: attacks,fast,special
 # securityDefinitions:
 #   cheesy_auth:
 #     type: oauth2
