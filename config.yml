@@ -4,11 +4,15 @@ servers:
     description: Demandcluster Dev Server  
 info:
   description: |
-    Welcome to the sample Mailchimp Open Commerce API reference. This is a live example of how you can use [DociQL](https://github.com/wayfair/dociql) in conjunction with [GraphQL](https://graphql.org/) to generate beautiful static documentation for your own APIs.
+    Welcome to the [Demandcluster](https://demandcluster.com) API reference.
+
+    Our marketplace and channelmanger features are built upon the [Mailchimp Open Commerce Framework](https://mailchimp.com/developer/open-commerce/).
+    
+    This API uses GraphQL as part of our _developer first_ policy.
 
     GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
-  version: 1.0.0
-  title: Mailchimp Open Commerce API
+  version: 1.0.1
+  title: Demandcluster API
 #  termsOfService: 'https://graphql-pokemon2.vercel.app/terms'
   contact:
     email: ron@demandcluster.com
