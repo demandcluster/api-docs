@@ -1,4 +1,4 @@
-introspection: https://graphql-pokemon2.vercel.app
+introspection: https://api.demandcluster.com/graphql
 servers:
   - url: https://api.demandcluster.com/graphql
     description: Demandcluster Dev Server  
@@ -9,19 +9,19 @@ info:
     GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
   version: 1.0.0
   title: Mailchimp Open Commerce API
-  termsOfService: 'https://graphql-pokemon2.vercel.app/terms'
+#  termsOfService: 'https://graphql-pokemon2.vercel.app/terms'
   contact:
     email: ron@demandcluster.com
   license:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
 domains:
-  - name: Fetching Pokémons
-    description: Base methods to fetch pokemon information.
+  - name: Query Catalog
+    description: Base query to get product catalog information.
     usecases:
-     - name: Fetch Pokémons
-       description: Query list of Pokémon
-       query: query.pokemons
+     - name: Get Catalog
+       description: Query list of products
+       query: query.catalogItems
        expand: weight,height       
      - name: Fetch single Pokémon
        description: Query any Pokémon by number or name
@@ -54,6 +54,6 @@ domains:
 #     name: api_key
 #     description: Provides API Key access to the cheese
 #     in: header
-# externalDocs:
-#   description: Find out more about Swagger
-#   url: 'http://swagger.io'
+externalDocs:
+  description: Find out more about Mailchimp Open Commerce
+  url: 'https://mailchimp.com/developer/open-commerce/'
