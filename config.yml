@@ -23,23 +23,7 @@ domains:
        description: Query list of products
        query: query.catalogItems
        expand: weight,height       
-     - name: Fetch single Pokémon
-       description: Query any Pokémon by number or name
-       query: query.pokemon
-       expand: weight,height
-  - name: Evolution & Attacks
-    description: Custom methods to fetch pokemon
-    usecases:
-     - name: Query Attack Rating
-       description: Query Pokémon
-       query: query.pokemon       
-       select: id name
-       expand: attacks,fast,special
-     - name: Query Evolutions
-       description: Query Pokémon evolutions
-       query: query.pokemon
-       select: id name
-       expand: evolutions
+
 # securityDefinitions:
 #   cheesy_auth:
 #     type: oauth2
