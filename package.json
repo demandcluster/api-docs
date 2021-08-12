@@ -1,13 +1,13 @@
 {
   "name": "api-docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node bin/dociql -l eevee.png config.yml",
-    "publish": "node bin/dociql -l eevee.png -t docs config.yml",
+    "build": "dociql -l logo.svg config.yml",
+    "publish": "dociql -l logo.svg -t docs config.yml",
     "test": "nyc --lines 85 --reporter=lcovonly --reporter=text-summary mocha && node bin/dociql -l eevee.png config.yml",
-    "develop": "dociql -d",
+    "develop": "dociql -d config.yml",
     "start": "dociql -s config.yml"
   },
   "repository": {
