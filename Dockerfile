@@ -13,4 +13,3 @@ RUN apk add --no-cache \
 
 RUN npm install --unsafe-perm -g dociql
 RUN dociql -l logo.svg config.yml
-RUN dociql -s -l logo.svg config.yml
