@@ -6,7 +6,7 @@ info:
   description: |
     Welcome to the [Demandcluster](https://demandcluster.com) API reference.
 
-    Our marketplace and channelmanger features are built upon the [Mailchimp Open Commerce Framework](https://mailchimp.com/developer/open-commerce/).
+    Our marketplace, channel manager and SEO features are built upon the [Mailchimp Open Commerce Framework](https://mailchimp.com/developer/open-commerce/).
     
     This API uses GraphQL as part of our _developer first_ policy.
 
